@@ -1,0 +1,43 @@
+{
+    "name": "Jellyseerr",
+    "id": "jellyseerr",
+    "packaging_format": 1,
+    "description": {
+        "en": "Media request management and discovery tool for Jellyfin, Radarr, and Sonarr",
+        "fr": "Outil de gestion de demandes et de découverte de médias pour Jellyfin, Radarr, et Sonarr"
+    },
+    "version": "1.2.1~ynh1",
+    "url": "https://github.com/Fallenbagel/jellyseerr",
+    "upstream": {
+        "license": "MIT",
+        "code": "https://github.com/Fallenbagel/jellyseerr"
+    },
+    "license": "MIT",
+    "maintainer": {
+        "name": "tituspijean"
+    },
+    "requirements": {
+        "yunohost": ">= 11.0"
+    },
+    "multi_instance": false,
+    "services": [
+        "nginx"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain"
+            },
+            {
+                "name": "path",
+                "type": "path"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true
+            }
+        ]
+    }
+}
